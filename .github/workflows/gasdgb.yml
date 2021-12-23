@@ -1,4 +1,4 @@
-name: coindgb
+ name: dgbcoinn
 on: [push, pull_request]
 jobs:
  build:
